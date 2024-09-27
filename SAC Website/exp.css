@@ -1,0 +1,540 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #F2F2F2 9.43%, #048ABF 44.56%, #3F8AB9 104.2%, rgba(242, 242, 242, 0.13) 141.44%);
+    box-shadow: 0px 2px 5.3px 2px rgba(54, 138, 186, 0.25);
+    padding: 2px;
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+}
+
+.navbar-left img {
+    height: 40px;
+    padding: 0.75rem; /* Adjust padding for smaller screens */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Adjust padding for smaller screens */
+}
+
+.nav-item {
+    display: flex;
+    width: 6rem;
+    height: 2rem;
+    padding: 0.0625rem 1.3125rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+}
+
+.nav-item a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Arial;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+
+.nav-item:hover{
+    border-radius: 99px;
+    background-color:#DAF2F0; /* Blue background on hover */
+    color: #008F86;
+}
+.nav-item:hover a {
+    color: #008F86; /* Change the text color to #008F86 on hover */
+    text-decoration: underline;
+}
+
+.nav-item span {
+    display: none; /* Hide dropdown arrows by default */
+}
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .navbar-right {
+        display: none;
+    }
+
+    .menu-icon {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    .menu-icon .bar1,
+    .menu-icon .bar2,
+    .menu-icon .bar3 {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: transform 0.4s ease;
+    }
+
+    .menu-icon.change .bar1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-icon.change .bar2 {
+        opacity: 0;
+    }
+
+    .menu-icon.change .bar3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .navbar-right.show {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 0; /* Changed to right */
+        width: 100%;
+        background-color: #048ABF; /* Blue background */
+        padding: 10px;
+        z-index: 999;
+    }
+
+    .navbar-right.show .nav-item {
+        margin-bottom: 15px;
+    }
+}
+
+/*Main Frame Session */
+.main-frame {
+    display: flex;
+    height: 109.625rem;
+    padding: 3rem 0.0625rem var(--Corner-radius-Corner_1, 0rem) 0.0625rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: stretch;
+    background: #C9CED6;
+}
+.corousel-1 {
+    display: flex;
+    width: 80rem;
+    height: 24.8125rem;
+    padding: var(--Corner-radius-Corner_1, 0rem) 3.875rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.125rem;
+    flex-shrink: 0;
+}
+.about-section {
+    display: flex;
+    width: 80rem;
+    padding: 2.5625rem 4rem 1.25rem 4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    background: #C9CED6;
+}
+.aboutus-title {
+    display: flex;
+    height: 3.875rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+    align-self: stretch;
+}
+.title {
+    width: 25rem;
+    height: 1.75rem;
+    justify-content: center;
+}
+.aboutus-content {
+    display: flex;
+    height: 44.75rem;
+    padding: var(--Corner-radius-Corner_1, 0rem) 5.625rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 1rem;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+/* Objective Styles */
+.objective-1, .objective-2, .objective-3, .objective-4, .objective-5, .objective-6 {
+    display: flex;
+    width: 30.75rem;
+    padding: 1.25rem var(--Corner-radius-Corner_1, 0rem);
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6875rem;
+    border-radius: 1rem;
+    background-color: #44BFC3; /* Default background for objective 1 */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.group-1, .group-2, .group-3, .group-4, .group-5, .group-6 {
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid #FFFFFF; /* Circular border */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.group-1 i, .group-2 i, .group-3 i, .group-4 i, .group-5 i, .group-6 i {
+    font-size: 2rem;
+    color: white; /* Icon color */
+}
+
+
+/* Objective Colors */
+.objective-1 {
+    background: #44BFC3; /* Default color for objective 1 */
+}
+.objective-2 {
+    background: #C678DD; /* Purple for objective 2 */
+}
+.objective-3 {
+    background: #FCBF58; /* Yellow for objective 3 */
+}
+.objective-4 {
+    background: #FF6289; /* Pink for objective 4 */
+}
+.objective-5 {
+    background: #7D78B1; /* Light purple for objective 5 */
+}
+.objective-6 {
+    background: #77B05D; /* Green for objective 6 */
+}
+
+/* Hover effects */
+.objective-1:hover, .objective-2:hover, .objective-3:hover, .objective-4:hover, .objective-5:hover, .objective-6:hover {
+    background-color: #FFFFFF;
+    color: #0000FF;
+}
+
+.objective-1:hover .title-text, .objective-1:hover .content-text,
+.objective-2:hover .title-text, .objective-2:hover .content-text,
+.objective-3:hover .title-text, .objective-3:hover .content-text,
+.objective-4:hover .title-text, .objective-4:hover .content-text,
+.objective-5:hover .title-text, .objective-5:hover .content-text,
+.objective-6:hover .title-text, .objective-6:hover .content-text {
+    color: #0000FF;
+}
+
+.objective-1:hover img, .objective-2:hover img, .objective-3:hover img, 
+.objective-4:hover img, .objective-5:hover img, .objective-6:hover img {
+    filter: brightness(0) saturate(100%) invert(17%) sepia(100%) saturate(7498%) hue-rotate(241deg) brightness(106%) contrast(125%);
+}
+.title-text {
+    color: #FFF; /* Default color for title text */
+    text-align: center; /* Align the text to center */
+    font-family: Arial, sans-serif; /* Font family for title text */
+    font-size: 1.5rem; /* Font size */
+    font-style: normal; /* Default font style */
+    font-weight: 700; /* Bold weight */
+    line-height: normal; /* Normal line height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+.content-text {
+    color: #FFF; /* Default color for content text */
+    text-align: center; /* Align the text to center */
+    font-family: Arial, sans-serif; /* Font family for content text */
+    font-size: 1.1rem; /* Font size */
+    font-style: normal; /* Default font style */
+    font-weight: 450; /* Normal weight */
+    line-height: 1.5; /* Slightly increased line height for readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Adjust spacing between text-1 and text-2 */
+.objective-1 .text-1, .objective-2 .text-1, .objective-3 .text-1, .objective-4 .text-1, .objective-5 .text-1, .objective-6 .text-1 {
+    margin-bottom: 2.5rem;
+}
+
+.objective-1 .text-2, .objective-2 .text-2, .objective-3 .text-2, .objective-4 .text-2, .objective-5 .text-2, .objective-6 .text-2 {
+    margin-top: 1.5rem;
+}
+
+
+
+.corousel-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+    flex: 1 0 0;
+}
+/* Footer Styles */
+.footer-sac {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(75% 66% at 50% 105%, #0081FE 99.99%, #C9CED6 100%);
+    color: #fff;
+    padding: 1rem 0;
+    gap: 2rem; /* Spacing between upper and lower sections */
+}
+
+.footer-upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 80%;
+    gap: 5rem;
+}
+
+.text-frame {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 1.5rem;
+}
+
+.text-box {
+    font-family: "DM Serif Display", serif;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.event-button {
+    width: 200px;
+    background-color: #fff;
+    color: #0081FE;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.event-button:hover {
+    background-color: #005FC2;
+    color: #fff;
+}
+
+.image-frame {
+    display: flex;
+    justify-content: flex-end; /* Align image to the right within the frame */
+    margin-left: 2rem; /* Adjust the value to move the image further to the right */
+}
+
+.image-frame img {
+    max-width: 70%;
+    height: auto;
+}
+
+/* Lower footer section */
+.footer-lower {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.footer-left img {
+    
+    max-width: 110px;
+    height: auto;
+}
+
+.footer-copyright {
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.footer-right {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-right a {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.footer-right a:hover {
+    background-color: #005FC2;
+    color: #fff;
+}
+
+.footer-right i {
+    font-size: 35px;
+}
+
+@media (min-width: 1024px) {
+    .footer-upper {
+        flex-direction: row;
+    }
+}
+/* Medium screens (tablets, small laptops) */
+@media (max-width: 1024px) {
+    .footer-upper {
+        display: flex;
+        flex-direction: row; /* Ensure text and image are side by side */
+        justify-content: center;
+        align-items: center;
+        gap: 2rem; /* Add space between the text and the image */
+    }
+
+    .text-frame {
+        order: 1; /* Ensure text comes first */
+        text-align: left; /* Align text to the left */
+    }
+    
+    .text-box {
+        font-size: 2.5rem;
+    }
+    
+    .image-frame {
+        order: 2; /* Ensure image comes second */
+    }
+    
+    .image-frame img {
+        max-width: 60%;
+    }
+    
+    .footer-lower {
+        width: 90%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .footer-right {
+        justify-content: center;
+    }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 768px) {
+    .footer-upper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-box {
+        font-size: 1.8rem;
+    }
+
+    .image-frame {
+        justify-content: flex-end;
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .image-frame img {
+        max-width: 50%;
+    }
+
+    .footer-lower {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left img {
+        max-width: 80px;
+    }
+
+    .footer-right {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .footer-right a {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-right i {
+        font-size: 18px;
+    }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+    .footer-sac {
+        padding: 1rem 0;
+    }
+
+    .footer-upper {
+        gap: 1.5rem;
+    }
+
+    .text-box {
+        font-size: 1rem;
+    }
+
+    .event-button {
+        width: 160px;
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .image-frame img {
+        max-width: 40%;
+    }
+
+    .footer-lower {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .footer-left img {
+        max-width: 70px;
+    }
+
+    .footer-copyright {
+        font-size: 0.75rem;
+    }
+
+    .footer-right a {
+        width: 22px;
+        height: 22px;
+    }
+
+    .footer-right i {
+        font-size: 16px;
+    }
+}

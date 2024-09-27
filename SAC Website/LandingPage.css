@@ -1,0 +1,752 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #F2F2F2 9.43%, #048ABF 44.56%, #3F8AB9 104.2%, rgba(242, 242, 242, 0.13) 141.44%);
+    box-shadow: 0px 2px 5.3px 2px rgba(54, 138, 186, 0.25);
+    padding: 2px;
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+}
+
+.navbar-left img {
+    height: 40px;
+    padding: 0.75rem; /* Adjust padding for smaller screens */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Adjust padding for smaller screens */
+}
+
+.nav-item {
+    display: flex;
+    width: 6rem;
+    height: 2rem;
+    padding: 0.0625rem 1.3125rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+}
+
+.nav-item a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Arial;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+
+.nav-item:hover{
+    border-radius: 99px;
+    background-color:#DAF2F0; /* Blue background on hover */
+    color: #008F86;
+}
+.nav-item:hover a {
+    color: #008F86; /* Change the text color to #008F86 on hover */
+    text-decoration: underline;
+}
+
+.nav-item span {
+    display: none; /* Hide dropdown arrows by default */
+}
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .navbar-right {
+        display: none;
+    }
+
+    .menu-icon {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    .menu-icon .bar1,
+    .menu-icon .bar2,
+    .menu-icon .bar3 {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: transform 0.4s ease;
+    }
+
+    .menu-icon.change .bar1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-icon.change .bar2 {
+        opacity: 0;
+    }
+
+    .menu-icon.change .bar3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .navbar-right.show {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 0; /* Changed to right */
+        width: 100%;
+        background-color: #048ABF; /* Blue background */
+        padding: 10px;
+        z-index: 999;
+    }
+
+    .navbar-right.show .nav-item {
+        margin-bottom: 15px;
+    }
+}
+
+/*Main Frame Session */
+.main-frame {
+    display: flex;
+    height: auto; /* Change height to auto for flexibility */
+    padding: 3rem 0.0625rem var(--Corner-radius-Corner_1, 0rem) 0.0625rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: stretch;
+    background: #C9CED6;
+}
+.corousel-1 {
+    display: flex;
+    width: 80%;
+    max-width: 80rem; /* Ensure it doesn't exceed a certain width */
+    height: auto; /* Change height to auto */
+    padding: var(--Corner-radius-Corner_1, 0rem) 3.875rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.125rem;
+    flex-shrink: 0;
+}
+/* About Section */
+.about-section {
+    display: flex;
+    width: 80%;
+    max-width: 80rem; /* Ensure it doesn't exceed a certain width */
+    padding: 2.5625rem 4rem 1.25rem 4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    background: #C9CED6;
+}
+.aboutus-title {
+    display: flex;
+    height: 3.875rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+    align-self: stretch;
+}
+.title {
+    width: 25rem;
+    height: 1.75rem;
+    justify-content: center;
+}
+.aboutus-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    padding: var(--Corner-radius-Corner_1, 0rem) 5.625rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 1rem;
+    align-self: stretch;
+}
+.objective-1, .objective-2, .objective-3, .objective-4, .objective-5, .objective-6 {
+    display: flex;
+    width: 30.75rem; /* Width for larger screens */
+    max-width: 100%; /* Ensure it doesn't exceed container */
+    padding: 0.5rem var(--Corner-radius-Corner_1, 0rem);
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    border-radius: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Objective Colors */
+.objective-1 {
+    background: #44BFC3; /* Default color for objective 1 */
+}
+.objective-2 {
+    background: #C678DD; /* Purple for objective 2 */
+}
+.objective-3 {
+    background: #FCBF58; /* Yellow for objective 3 */
+}
+.objective-4 {
+    background: #FF6289; /* Pink for objective 4 */
+}
+.objective-5 {
+    background: #7D78B1; /* Light purple for objective 5 */
+}
+.objective-6 {
+    background: #77B05D; /* Green for objective 6 */
+}
+
+/* Hover effects */
+.objective-1:hover, .objective-2:hover, .objective-3:hover, .objective-4:hover, .objective-5:hover, .objective-6:hover {
+    background-color: #FFFFFF;
+    color: #0000FF;
+}
+
+.objective-1:hover .title-text, .objective-1:hover .content-text,
+.objective-2:hover .title-text, .objective-2:hover .content-text,
+.objective-3:hover .title-text, .objective-3:hover .content-text,
+.objective-4:hover .title-text, .objective-4:hover .content-text,
+.objective-5:hover .title-text, .objective-5:hover .content-text,
+.objective-6:hover .title-text, .objective-6:hover .content-text {
+    color: #0000FF;
+}
+
+.objective-1:hover img, .objective-2:hover img, .objective-3:hover img, 
+.objective-4:hover img, .objective-5:hover img, .objective-6:hover img {
+    filter: brightness(0) saturate(100%) invert(17%) sepia(100%) saturate(7498%) hue-rotate(241deg) brightness(106%) contrast(125%);
+}
+.title-text {
+    color: #FFF; /* Default color for title text */
+    text-align: center; /* Align the text to center */
+    font-family: Arial, sans-serif; /* Font family for title text */
+    font-size: 1.5rem; /* Font size */
+    font-style: normal; /* Default font style */
+    font-weight: 700; /* Bold weight */
+    margin: 0; /* Remove default margin */
+    align-items: flex-end;
+}
+.content-text {
+    color: #FFF; /* Default color for content text */
+    text-align: center; /* Align the text to center */
+    font-family: Arial, sans-serif; /* Font family for content text */
+    font-size: 18px; /* Font size */
+    font-style: normal; /* Default font style */
+    font-weight: 450; /* Normal weight */
+    line-height: 1; /* Slightly increased line height for readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Adjust spacing between text-1 and text-2 */
+.objective-1 .text-1, .objective-2 .text-1, .objective-3 .text-1, .objective-4 .text-1, .objective-5 .text-1, .objective-6 .text-1 {
+    margin-bottom: 1rem;
+}
+
+.objective-1 .text-2, .objective-2 .text-2, .objective-3 .text-2, .objective-4 .text-2, .objective-5 .text-2, .objective-6 .text-2 {
+    margin-top: 0.5rem;
+}
+
+/* Trophy Logo with Circular Border */
+.logo-container {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #FFFFFF; /* White circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.trophy-logo {
+    font-size: 2rem;
+    color: #0000FF; /* Blue color for trophy icon */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effect: Remove Circle and Keep Blue Logo */
+.objective-1:hover .logo-container,
+.objective-2:hover .logo-container,
+.objective-3:hover .logo-container,
+.objective-4:hover .logo-container,
+.objective-5:hover .logo-container,
+.objective-6:hover .logo-container {
+    background-color: transparent; /* Remove the circle */
+}
+
+.objective-1:hover .trophy-logo,
+.objective-2:hover .trophy-logo,
+.objective-3:hover .trophy-logo,
+.objective-4:hover .trophy-logo,
+.objective-5:hover .trophy-logo,
+.objective-6:hover .trophy-logo {
+    color: #0000FF; /* Keep the logo blue */
+}
+
+
+/* Tablet View: Between 768px and 1024px, objectives are side by side */
+@media (min-width: 768px) and (max-width: 1478px) {
+    .aboutus-content {
+        flex-direction: row; /* Ensure objectives are side by side */
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .objective-1, .objective-2, .objective-3, .objective-4, .objective-5, .objective-6 {
+        width: calc(50% - 1rem); /* Two objectives per row */
+        box-sizing: border-box; /* Ensure padding is included in width */
+        padding: 1rem; /* Add padding */
+    }
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .main-frame {
+        padding: 1rem; /* Adjust padding for mobile */
+    }
+
+    .corousel-1,
+    .about-section {
+        width: 100%; /* Full width for mobile */
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .aboutus-content {
+        flex-direction: column; /* Stack objectives vertically */
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .objective-1, .objective-2, .objective-3, .objective-4, .objective-5, .objective-6 {
+        width: 100%; /* Full width for objectives on mobile */
+        padding: 1rem; /* Add padding */
+        box-sizing: border-box; /* Ensure padding is included in width */
+    }
+}
+.corousel-2 {
+    display: flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+    flex: 1 0 0;
+}
+
+.first-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.carousel-frame {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+    transition: transform 0.5s ease; /* Add smooth transition for sliding */
+}
+
+.frame {
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    width: 18.9375rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rectangle {
+    width: 100%;
+    height: 18.25rem;
+    background: #F2F2F2;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    display: flex;
+    width: 15.0625rem;
+    height: 14.5625rem;
+    flex-direction: column;
+    justify-content: center;
+    color: #000;
+    white-space: normal;
+    overflow: auto;
+    text-overflow: clip;
+    font-family: "Lexend Peta";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.name {
+    color: #D8D8D8;
+    text-align: center;
+    font-family: "Lexend Peta";
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: 0.135rem;
+    text-transform: uppercase;
+}
+
+.department {
+    color: #D8D8D8;
+    text-align: center;
+    font-family: "Lexend Peta";
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.09rem;
+    text-transform: uppercase;
+}
+
+.image-container {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    margin-top: -2rem;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.second-frame {
+    display: flex;
+    width: 4.125rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.dots {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) { /* For tablets */
+    .carousel-frame {
+        flex-wrap: nowrap; /* Ensure items are in one row */
+    }
+
+    .frame {
+        width: 14rem; /* Decrease frame width */
+        height: 22rem; /* Decrease frame height */
+    }
+}
+
+@media (max-width: 768px) { /* For mobile screens */
+    .carousel-frame {
+        flex-wrap: nowrap; /* Ensure items are in one row */
+    }
+
+    .frame {
+        width: 12rem; /* Decrease frame width */
+        height: 20rem; /* Decrease frame height */
+    }
+}
+
+/* Responsive styling: Show only 4 frames on the home page */
+.carousel-container {
+    overflow: hidden;
+  }
+  
+  .carousel-frame:nth-child(n+5) {
+    display: none; /* Hide frames after the first 4 */
+  }
+/* Footer Styles */
+.footer-sac {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(75% 66% at 50% 105%, #0081FE 99.99%, #C9CED6 100%);
+    color: #fff;
+    padding: 1rem 0;
+    gap: 2rem; /* Spacing between upper and lower sections */
+}
+
+.footer-upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 80%;
+    gap: 5rem;
+}
+
+.text-frame {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 1.5rem;
+}
+
+.text-box {
+    font-family: "DM Serif Display", serif;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.event-button {
+    width: 200px;
+    background-color: #fff;
+    color: #0081FE;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.event-button:hover {
+    background-color: #005FC2;
+    color: #fff;
+}
+
+.image-frame {
+    display: flex;
+    justify-content: flex-end; /* Align image to the right within the frame */
+    margin-left: 2rem; /* Adjust the value to move the image further to the right */
+}
+
+.image-frame img {
+    max-width: 70%;
+    height: auto;
+}
+
+/* Lower footer section */
+.footer-lower {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.footer-left img {
+    
+    max-width: 110px;
+    height: auto;
+}
+
+.footer-copyright {
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.footer-right {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-right a {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.footer-right a:hover {
+    background-color: #005FC2;
+    color: #fff;
+}
+
+.footer-right i {
+    font-size: 14px;
+}
+
+@media (min-width: 1024px) {
+    .footer-upper {
+        flex-direction: row;
+    }
+}
+/* Medium screens (tablets, small laptops) */
+@media (max-width: 1024px) {
+    .footer-upper {
+        display: flex;
+        flex-direction: row; /* Ensure text and image are side by side */
+        justify-content: center;
+        align-items: center;
+        gap: 2rem; /* Add space between the text and the image */
+    }
+
+    .text-frame {
+        order: 1; /* Ensure text comes first */
+        text-align: left; /* Align text to the left */
+    }
+    
+    .text-box {
+        font-size: 2.5rem;
+    }
+    
+    .image-frame {
+        order: 2; /* Ensure image comes second */
+    }
+    
+    .image-frame img {
+        max-width: 60%;
+    }
+    
+    .footer-lower {
+        width: 90%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .footer-right {
+        justify-content: center;
+    }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 768px) {
+    .footer-upper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-box {
+        font-size: 1.8rem;
+    }
+
+    .image-frame {
+        justify-content: flex-end;
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .image-frame img {
+        max-width: 50%;
+    }
+
+    .footer-lower {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left img {
+        max-width: 80px;
+    }
+
+    .footer-right {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .footer-right a {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-right i {
+        font-size: 18px;
+    }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+    .footer-sac {
+        padding: 1rem 0;
+    }
+
+    .footer-upper {
+        gap: 1.5rem;
+    }
+
+    .text-box {
+        font-size: 1rem;
+    }
+
+    .event-button {
+        width: 160px;
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .image-frame img {
+        max-width: 40%;
+    }
+
+    .footer-lower {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .footer-left img {
+        max-width: 70px;
+    }
+
+    .footer-copyright {
+        font-size: 0.75rem;
+    }
+
+    .footer-right a {
+        width: 22px;
+        height: 22px;
+    }
+
+    .footer-right i {
+        font-size: 16px;
+    }
+}
